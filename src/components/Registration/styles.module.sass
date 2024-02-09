@@ -1,0 +1,74 @@
+.section
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 450px
+    height: 650px
+    background: var(--color-black)
+    border-radius: 8px
+    border: 2px solid var(--color-primary)
+    box-shadow: 15px 15px 8px rgba(0, 0, 0, 0.3)
+    opacity: 0.99
+
+.form
+    width: 450px
+    height: 100%
+    padding: 30px
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    gap: 50px
+
+.inputField
+    position: relative
+    width: 100%
+    input
+        width: 100%
+        border: none
+        border-bottom: 2px solid var(--color-primary)
+        background: transparent
+        color: var(--color-white)
+        outline: none
+        transition: border-bottom-color 0.3s ease
+    label
+        position: absolute
+        top: 50%
+        left: 0
+        transform: translateY(-50%)
+        color: var(--color-primary)
+        pointer-events: none
+        transition: transform 0.3s ease, color 0.3s ease
+    input
+        &:focus ~ label,
+        &:valid ~ label,
+        &:invalid ~ label
+            transform: translateY(-150%)
+            font-size: 14px
+            color: var(--color-primary)
+
+button
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 100%
+    height: 50px
+    padding: 0 20px
+    border-radius: 8px
+    background: var(--color-gradient)
+    color: var(--color-white)
+    font-size: 15px
+    transition: var(--tr-time)
+    &:hover
+        background: var(--color-white)
+        color: var(--color-black)
+        transition: var(--tr-time)
+
+span
+    font-size: 14px
+    a
+        color: var(--color-primary)
+        border-bottom: 1px solid var(--color-primary)
+
+h2
+    color: var(--color-primary)
